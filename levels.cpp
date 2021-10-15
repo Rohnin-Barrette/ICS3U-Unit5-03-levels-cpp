@@ -52,14 +52,19 @@ int main() {
     int returned_percentage;
 
     // input
-
+    
     std::cout << "Enter a level you would like to convetrt to a percent: ";
     std::cin >> level_input_string_from_user;
-
+    
     // call functions
     returned_percentage = LevelCalculator(level_input_string_from_user);
 
     // output
+    if (returned_percentage == -1) {
+        std::cout << "Invalid Input" << std::endl;
+        std::cout << "\nDone." << std::endl;
+    } else {
     std::cout << "That would be a " << returned_percentage << "%." << std::endl;
     std::cout << "\nDone.";
+    }
 }
